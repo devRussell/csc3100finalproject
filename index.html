@@ -23,15 +23,25 @@
                     <option value="txtInstructorAccount" aria-label="instructor account">Instructor</option>
                 </select>
                 <button id="btnRegister" type="button" class="btn btn-success">Register</button>
-                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapLogIn">Have An Account? Log In Here</button>
+                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapLogIn">Have An Account? Log In Here</button> <!-- For some reason, when clicked this button does nothing. -P -->>
             </div>
         </form>
+        <!-- Login Form here -->
+        <form class="card col-12 col-md-5 col-lg-4" id="frmLogin" style="display: none;">
+            <div class="card-body">
+                <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+                <h3 class="text-center text-primary">User Login</h3>
+                <input id="txtUsername2" class="form-control mt-4" type="email" placeholder="JohnDoe@email.com" aria-label="input for email">
+                <input id="txtPassword" class="form-control mt-2" type="password" placeholder="Password" aria-label="input for password">
+                <button class="btn btn-success col-12 mt-4" type="button" id="btnLogin" aria-label="button to login account">Login</button>
+                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapRegister" aria-label="link to change log in">Need to register? Click here.</button>
+            </div>    
+        </form>
     </div>
-    
-    <!-- Perrin here -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
 </body>
 </html>
