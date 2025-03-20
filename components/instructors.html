@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="d-flex justify-content-center">
-        <!-- Registration form -->
-        <form class="card col 12 col-md-6 col-lg-4" id="frmRegister">
-            <div class="card-body">
-                <h2 class="text-center text-primary">CSC3100</h2>
-                <h4 class="text-center text-primary mt-3">Instructor Registration Form</h4>
-                <input id="txtFirstName" type="text" placeholder="John" aria-label="Input your First Name" class="form-control mb-2">
-                <input id="txtLastName" type="text" placeholder="Doe" aria-label="Input your Last Name" class="form-control mb-2">
-                <input id="txtLEmail" type="email" placeholder="email address (jdoe@email.com)" aria-label="enter your email address" class="form-control mb-2">
-                <input id="txtLPassword" type="password" placeholder="password" aria-label="enter desired password" class="form-control mb-2">
-                <button id="btnRegister" type="button" class="btn btn-success">Register</button>
-                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapLogin">Have An Account? Log In Here</button>
-            </div>
-        </form>
-        <!-- Login form -->
-        <form class="card col-12 col-md-5 col-lg-4" id="frmLogin" style="display: none;">
-            <div class="card-body">
-                <h1 class="text-center mb-0 text-primary">CSC3100</h1>
-                <h3 class="text-center text-primary">Instructor Login</h3>
-                <input id="txtUsername" class="form-control mt-4" type="email" placeholder="JohnDoe@email.com" aria-label="input your email">
-                <input id="txtPassword" class="form-control mt-2" type="password" placeholder="Password" aria-label="input your password">
-                <button class="btn btn-success col-12 mt-4" type="button" id="btnLogin" aria-label="button to login account">Login</button>
-                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapRegister" aria-label="link to change log in">Need to register? Click here.</button>
-            </div>    
-        </form>
+<form id="frmInstructorRegistration" class="card col 12 col-md-6 col-lg-4">
+    <div class="card-body">
+        <h2 class="text-center text-primary">CSC3100</h2>
+        <h4 class="text-center text-primary mt-3">Instructor Registration Form</h4>
+        <input id="txtFirstName" type="text" placeholder="John" aria-label="Input your First Name" class="form-control mb-2">
+        <input id="txtLastName" type="text" placeholder="Doe" aria-label="Input your Last Name" class="form-control mb-2">
+        <input id="txtLEmail" type="email" placeholder="email address (jdoe@email.com)" aria-label="enter your email address" class="form-control mb-2">
+        <input id="txtLPassword" type="password" placeholder="password" aria-label="enter desired password" class="form-control mb-2">
+        <button id="btnRegister" type="button" class="btn btn-success">Register</button>
+        <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapInstructorLogin">Have An Account? Log In Here</button>
     </div>
-</body>
-</html>
+</form>
+    <!-- Login form -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmStudentLogin" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Instructor Login</h3>
+        <input id="txtUsername" class="form-control mt-4" type="email" placeholder="JohnDoe@email.com" aria-label="input your email">
+        <input id="txtPassword" class="form-control mt-2" type="password" placeholder="Password" aria-label="input your password">
+        <button class="btn btn-success col-12 mt-4" type="button" id="btnLogin" aria-label="button to login account">Login</button>
+        <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapInstructorRegister" aria-label="link to change log in">Need to register? Click here.</button>
+    </div>    
+</form>
