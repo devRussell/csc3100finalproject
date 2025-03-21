@@ -23,7 +23,7 @@ document.querySelector('#btnGoToStudentPage').addEventListener('click', function
     .then(response => response.text())
     .then(html => {
         const objScript = document.createElement('script');
-        objScript.src = 'js/studets.js'; 
+        objScript.src = 'js/students.js'; 
         objScript.type = 'text/javascript';
         document.head.appendChild(objScript);
         document.querySelector('#divContent').innerHTML += html;
@@ -33,9 +33,9 @@ document.querySelector('#btnGoToStudentPage').addEventListener('click', function
 })
 
 //swaps from the register page to the login page
-document.querySelector('#btnSwapInstructorLogIn').addEventListener('click', function(){
+document.querySelector('#btnSwapInstructorLogin').addEventListener('click', function(){
     document.querySelector('#frmInstructorRegistration').style.display = 'none'
-    document.querySelector('#frmStudentLogin').style.display = 'block'
+    document.querySelector('#frmInstructorLogin').style.display = 'block'
 })
 
 //swaps from the login page to the register page
