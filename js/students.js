@@ -66,3 +66,38 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
         });
     }
 })
+
+document.querySelector('#btnStudentLogin').addEventListener('click',function(){
+    const regEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+    let blnError = false
+    let strMessage = ""
+
+    let strStudentEmail = document.querySelector('#txtStudentUsername').value 
+    let strStudentPassword = document.querySelector('#txtStudentPasswordLogin').value
+
+    if(!regEmail.test(strStudentEmail)){
+        blnError = true
+        strMessage += '<p class="mb-0 mt-0" aria-label="Email address must be valid">Email address must be valid</p>'
+    }
+
+    if(strStudentPassword.length < 8 || strStudentPassword.length > 64){
+        blnError = true
+        strMessage += '<p class="mb-0 mt-0" aria-label="Password must be valid (between 8 and 64 caracter)">Password must be valid (between 8 and 64 caracter)</p>'
+    }
+
+    if(blnError){
+        Swal.fire({
+        title: "Oh no, there is an error",
+        html: strMessage,
+        icon: "error"
+        });
+    }
+
+    if(!blnError){
+        Swal.fire({
+        title: "Login Successful",
+        text: "",
+        icon: "success"
+        });
+    }
+})
