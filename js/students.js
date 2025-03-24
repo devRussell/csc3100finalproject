@@ -67,6 +67,7 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
     }
 })
 
+//Validation for the login page
 document.querySelector('#btnStudentLogin').addEventListener('click',function(){
     const regEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     let blnError = false

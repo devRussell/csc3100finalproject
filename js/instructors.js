@@ -67,6 +67,7 @@ document.querySelector('#btnIntructorRegister').addEventListener('click', functi
     }
 })
 
+//validation for the login page
 document.querySelector('#btnInstructorLogin').addEventListener('click',function(){
     const regEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     let blnError = false
