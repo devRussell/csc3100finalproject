@@ -66,7 +66,7 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
         });
         //swaps from register to experience page
         document.querySelector('#frmStudentRegistration').style.display = 'none'
-        document.querySelector('#frmStudentExperience').style.display = 'block'
+        document.querySelector('#frmStudentLogin').style.display = 'block'
     }
 })
 
