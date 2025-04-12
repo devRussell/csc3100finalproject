@@ -16,6 +16,17 @@ document.querySelector('#btnSwapStudentLogIn').addEventListener('click', functio
     document.querySelector('#frmStudentLogin').style.display = 'block'
 })
 
+
+//hides pending reviews when the user clicks on the submit button or the delete button
+//Doesn't work yet
+document.querySelector('#btnStudentReviewSubmit').addEventListener('click', function(){
+    document.querySelector('#divPendingReviews').style.display = 'none'
+})
+
+document.querySelector('#btnStudentReviewDelete').addEventListener('click', function(){
+    document.querySelector('#divPendingReviews').style.display = 'none'
+})
+
 //Validation for the registration form
 document.querySelector('#btnStudentRegister').addEventListener('click', function(){
 
@@ -26,7 +37,7 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
 
     //variables to store the value of user input
     let strStudentEmail = document.querySelector('#txtStudentEmail').value
-    let strStudentPassword = document.querySelector('#txtStudentPasswordRegister').value
+    let strPassword = document.querySelector('#txtStudentPasswordRegister').value
     let strStudentFirstName = document.querySelector('#txtStudentFirstName').value
     let strStudentLastName = document.querySelector('#txtStudentLastName').value
 
@@ -72,7 +83,7 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
         });
         //swaps from register to experience page
         document.querySelector('#frmStudentRegistration').style.display = 'none'
-        document.querySelector('#frmStudentLogin').style.display = 'block'
+        document.querySelector('#frmStudentLogin').style.display = 'block' //Not making the switch, for whatever reason, perhaps from the lack of a check for phone number
     }
 })
 

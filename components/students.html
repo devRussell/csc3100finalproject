@@ -29,9 +29,14 @@
     <div class="card-body">
         <h1 class="text-center mb-0 text-primary">CSC3100</h1>
         <h3 class="text-center text-primary">Student Experience</h3>
-        <h5 class="text-center mt-0">Pending Reviews:</h5>
-        <input id="txtPendingReview" class="form-control mt-4" type="text" placeholder="Your Review Here" aria-label="input for review">
-        <button class="btn btn-success col-6 mt-4" type="button" id="btnStudentReview" aria-label="button to submit review">Submit Review</button>
+        <div class="d-flex flex-column gap-2" id="divPendingReviews">
+            <h5 class="text-center mt-0">Pending Reviews:</h5>
+            <p class="text-center">This class is awesome!!</p>
+            <div class="d-flex justify-content-between mt-4">
+                <button class="btn btn-success col-5" type="button" id="btnStudentReviewSubmit" aria-label="button to submit review">Submit Review</button>
+                <button class="btn btn-danger col-5" type="button" id="btnStudentReviewDelete" aria-label="button to reject review">Delete Review</button>
+            </div>
+        </div>
         <button class="btn btn-success col-12 mt-4" type="button" id="btnStudentExperienceSubmit" aria-label="button to submit experience">Submit</button>
         <button class="btn btn-link col-12 mt-0" type="button" id="btnSignOut" aria-label="Need to register? click here">Sign Out</button>
     </div>
