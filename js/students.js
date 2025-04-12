@@ -64,6 +64,9 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
         text: "",
         icon: "success"
         });
+        //swaps from register to experience page
+        document.querySelector('#frmStudentRegistration').style.display = 'none'
+        document.querySelector('#frmStudentExperience').style.display = 'block'
     }
 })
 
@@ -100,5 +103,9 @@ document.querySelector('#btnStudentLogin').addEventListener('click',function(){
         text: "",
         icon: "success"
         });
+
+        //swaps from register to experience page
+        document.querySelector('#frmStudentLogin').style.display = 'none'
+        document.querySelector('#frmStudentExperience').style.display = 'block'
     }
 })
