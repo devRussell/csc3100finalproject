@@ -1,13 +1,19 @@
-//swaps from the login page to the register page
+//swaps from the register page to the login page
 document.querySelector('#btnSwapStudentLogIn').addEventListener('click', function(){
     document.querySelector('#frmStudentRegistration').style.display = 'none'
     document.querySelector('#frmStudentLogin').style.display = 'block'
 })
 
 //swaps from the login page to the register page
-document.querySelector('#btnSwapStudentRegister').addEventListener('click', function(){
+document.querySelector('#btnSignOut').addEventListener('click', function(){
     document.querySelector('#frmStudentLogin').style.display = 'none'
     document.querySelector('#frmStudentRegistration').style.display = 'block'
+})
+
+//swaps from the experience page to the login page
+document.querySelector('#btnSwapStudentLogIn').addEventListener('click', function(){
+    document.querySelector('#frmStudentExperience').style.display = 'none'
+    document.querySelector('#frmStudentLogin').style.display = 'block'
 })
 
 //Validation for the registration form
@@ -19,8 +25,8 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
     let strMessage = ""
 
     //variables to store the value of user input
-    let strInstructorEmail = document.querySelector('#txtStudentEmail').value
-    let strInstructorPassword = document.querySelector('#txtStudentPasswordRegister').value
+    let strStudentEmail = document.querySelector('#txtStudentEmail').value
+    let strStudentPassword = document.querySelector('#txtStudentPasswordRegister').value
     let strStudentFirstName = document.querySelector('#txtStudentFirstName').value
     let strStudentLastName = document.querySelector('#txtStudentLastName').value
 
@@ -37,13 +43,13 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
     }
     
     // checking email validity
-    if(!regEmail.test(strInstructorEmail)){
+    if(!regEmail.test(strStudentEmail)){
         blnError = true
         strMessage += '<p class="mb-0 mt-0" aria-label="Email address must be valid">Email address must be valid</p>'
     }
 
     //checking to make sure the password is NIST complient
-    if(strInstructorPassword.length < 8 || strInstructorPassword.length > 64){
+    if(strStudentPassword.length < 8 || strStudentPassword.length > 64){
         blnError = true
         strMessage += '<p class="mb-0 mt-0" aria-label="Password must be valid (between 8 and 64 caracter)">Password must be valid (between 8 and 64 caracter)</p>'
     }
