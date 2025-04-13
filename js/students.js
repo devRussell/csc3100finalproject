@@ -5,13 +5,13 @@ document.querySelector('#btnSwapStudentLogIn').addEventListener('click', functio
 })
 
 //swaps from the login page to the register page
-document.querySelector('#btnSignOut').addEventListener('click', function(){
+document.querySelector('#btnSwapStudentRegister').addEventListener('click', function(){
     document.querySelector('#frmStudentLogin').style.display = 'none'
     document.querySelector('#frmStudentRegistration').style.display = 'block'
 })
 
 //swaps from the experience page to the login page
-document.querySelector('#btnSwapStudentLogIn').addEventListener('click', function(){
+document.querySelector('#btnSignOut').addEventListener('click', function(){
     document.querySelector('#frmStudentExperience').style.display = 'none'
     document.querySelector('#frmStudentLogin').style.display = 'block'
 })
@@ -29,15 +29,18 @@ document.querySelector('#btnStudentReviewDelete').addEventListener('click', func
 
 //Validation for the registration form
 document.querySelector('#btnStudentRegister').addEventListener('click', function(){
+    // alert("test")
 
     //regexr for testing the validity of entered values and generic variables
     const regEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+    const regPhone = /^(?:\([0-9]{3}\)|[0-9]{3})[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$/;
     let blnError = false
     let strMessage = ""
 
     //variables to store the value of user input
     let strStudentEmail = document.querySelector('#txtStudentEmail').value
-    let strPassword = document.querySelector('#txtStudentPasswordRegister').value
+    let strStudentPhone = document.querySelector('#numPhoneNumber').value
+    let strStudentPassword = document.querySelector('#txtStudentPasswordRegister').value
     let strStudentFirstName = document.querySelector('#txtStudentFirstName').value
     let strStudentLastName = document.querySelector('#txtStudentLastName').value
 
@@ -57,6 +60,11 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
     if(!regEmail.test(strStudentEmail)){
         blnError = true
         strMessage += '<p class="mb-0 mt-0" aria-label="Email address must be valid">Email address must be valid</p>'
+    }
+
+    if(!regPhone.test(strStudentPhone)){
+        blnError = true
+        strMessage += '<p class="mb-0 mt-0" aria-label="Phone number must be valid">Phone number must be valid</p>'
     }
 
     //checking to make sure the password is NIST complient
@@ -81,9 +89,9 @@ document.querySelector('#btnStudentRegister').addEventListener('click', function
         text: "",
         icon: "success"
         });
-        //swaps from register to experience page
+
         document.querySelector('#frmStudentRegistration').style.display = 'none'
-        document.querySelector('#frmStudentLogin').style.display = 'block' //Not making the switch, for whatever reason, perhaps from the lack of a check for phone number
+        document.querySelector('#frmStudentLogin').style.display = 'block'
     }
 })
 
