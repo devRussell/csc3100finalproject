@@ -29,16 +29,25 @@
     <div class="card-body">
         <h1 class="text-center mb-0 text-primary">CSC3100</h1>
         <h3 class="text-center text-primary">Student Experience</h3>
-        <div class="d-flex flex-column gap-2" id="divPendingReviews">
-            <h5 class="text-center mt-0">Pending Reviews:</h5>
-            <p class="text-center">This class is awesome!!</p>
-            <select class="form-select" id="selectPrivatePublic" aria-label="select review privacy">
-                <option selected>Public</option>
-                <option value="1">Private</option>
+        <div class="d-flex flex-column gap-2" id="divPendingReviews" style="display: block;">
+            <h5 class="text-center mt-0">Leave a Review:</h5>
+            <select class="form-select" id="cboPrivatePublic" aria-label="Select review privacy">
+                <option value="public" selected>Public</option>
+                <option value="private">Private</option>
             </select>
+            <input id="txtStudentName" type="text" class="form-control mt-2" placeholder="Enter student name" aria-label="Input student name">
+            <div id="publicReviewInput" style="display: block;">
+                <textarea id="txtPublicReview" class="form-control mt-2" placeholder="Write your review here..." aria-label="Input public review"></textarea>
+            </div>
+            <div id="privateReviewInput" style="display: none;">
+                <select class="form-select mt-2" id="cboPrivateReviewType" aria-label="Select private review type">
+                    <option value="positive">Positive</option>
+                    <option value="negative">Negative</option>
+                </select>
+            </div>
             <div class="d-flex justify-content-between mt-4">
-                <button class="btn btn-success col-5" type="button" id="btnStudentReviewSubmit" aria-label="button to submit review">Submit Review</button>
-                <button class="btn btn-danger col-5" type="button" id="btnStudentReviewDelete" aria-label="button to reject review">Delete Review</button>
+                <button class="btn btn-success col-5" type="button" id="btnStudentReviewSubmit" aria-label="Submit review">Submit Review</button>
+                <button class="btn btn-danger col-5" type="button" id="btnStudentReviewDelete" aria-label="Delete review">Delete Review</button>
             </div>
         </div>
         <div class="d-flex flex-column gap-2" id="divPeerReviews">

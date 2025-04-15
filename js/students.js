@@ -16,7 +16,7 @@ document.querySelector('#btnSignOut').addEventListener('click', function(){
     document.querySelector('#frmStudentLogin').style.display = 'block'
 })
 
-// Shows student score when the user clicks on the button
+// Shows student score when the user clicks on the score button
 document.querySelector('#btnStudentScore').addEventListener('click', function() {
     document.querySelector('#studentScore').style.display = 'block';
     document.querySelector('#btnHideScore').style.display = 'block';
@@ -29,16 +29,47 @@ document.querySelector('#btnHideScore').addEventListener('click', function() {
     document.querySelector('#btnStudentScore').style.display = 'block';
 });
 
+// Handle privacy selection changes
+document.querySelector('#cboPrivatePublic').addEventListener('change', function () {
+    const privacy = this.value;
+    if (privacy === 'public') {
+        document.querySelector('#publicReviewInput').style.display = 'block';
+        document.querySelector('#privateReviewInput').style.display = 'none';
+    } else if (privacy === 'private') {
+        document.querySelector('#publicReviewInput').style.display = 'none';
+        document.querySelector('#privateReviewInput').style.display = 'block';
+    }
+});
 
 //hides pending reviews when the user clicks on the submit button or the delete button
-//Doesn't work yet
-document.querySelector('#btnStudentReviewSubmit').addEventListener('click', function(){
-    document.querySelector('#divPendingReviews').style.display = 'none'
-})
+// Function to reset the review form
+function resetReviewForm() {
+    // Reset the privacy dropdown to "public"
+    document.querySelector('#cboPrivatePublic').value = 'public';
+    
+    // Reset the student name input
+    document.querySelector('#txtStudentName').value = '';
+    
+    // Reset the public review textarea
+    document.querySelector('#txtPublicReview').value = '';
+    
+    // Reset the private review dropdown
+    document.querySelector('#cboPrivateReviewType').value = 'positive';
+    
+    // Show the public review input and hide the private review input
+    document.querySelector('#publicReviewInput').style.display = 'block';
+    document.querySelector('#privateReviewInput').style.display = 'none';
+}
 
-document.querySelector('#btnStudentReviewDelete').addEventListener('click', function(){
-    document.querySelector('#divPendingReviews').style.display = 'none'
-})
+// Hide divPendingReviews and reset the form on submit
+document.querySelector('#btnStudentReviewSubmit').addEventListener('click', function () {
+    resetReviewForm();
+});
+
+// Hide divPendingReviews and reset the form on delete
+document.querySelector('#btnStudentReviewDelete').addEventListener('click', function () {
+    resetReviewForm();
+});
 
 //Validation for the registration form
 document.querySelector('#btnStudentRegister').addEventListener('click', function(){
