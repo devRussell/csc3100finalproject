@@ -19,6 +19,14 @@ document.querySelector('#btnSignOut').addEventListener('click', function(){
 // Shows student score when the user clicks on the button
 document.querySelector('#btnStudentScore').addEventListener('click', function() {
     document.querySelector('#studentScore').style.display = 'block';
+    document.querySelector('#btnHideScore').style.display = 'block';
+    document.querySelector('#btnStudentScore').style.display = 'none';
+});
+
+document.querySelector('#btnHideScore').addEventListener('click', function() {
+    document.querySelector('#studentScore').style.display = 'none';
+    document.querySelector('#btnHideScore').style.display = 'none';
+    document.querySelector('#btnStudentScore').style.display = 'block';
 });
 
 
