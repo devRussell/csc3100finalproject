@@ -265,13 +265,6 @@ document.querySelector('#btnIntructorRegister').addEventListener('click', functi
         blnError = true
         strMessage += '<p class="mb-0 mt-0" aria-label="First name cannot be empty">First name cannot be empty</p>'
     }
-    
-    //START THIS IS CODE THAT IS FOR TESTING, REMOVE IT WHEN EDEPLOYING
-    let blnSkipRegistrationAndLogin = false
-    if(strInstructorFirstName == "d"){
-        blnSkipRegistrationAndLogin = true
-    }
-    //END THIS IS CODE THAT IS FOR TESTING, REMOVE IT WHEN EDEPLOYING
 
     //checking to make sure the last name isn't empty
     if(strInstructorLastName == ""){
@@ -298,13 +291,6 @@ document.querySelector('#btnIntructorRegister').addEventListener('click', functi
         html: strMessage,
         icon: "error"
         });
-
-        //START MORE TEST CODE TO REMOVE
-        if(blnSkipRegistrationAndLogin){
-            document.querySelector('#frmInstructorRegistration').style.display = 'none'
-            document.querySelector('#frmInstructorExperience').style.display = 'block'
-        }
-        //END MORE TEST CODE TO REMOVE
     }
 
     //shows a success message if everyhthing is correct and moves them to the login page
