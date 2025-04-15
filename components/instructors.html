@@ -21,3 +21,189 @@
         <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapInstructorRegister" aria-label="Need to register? click here">Need to register? Click here.</button>
     </div>    
 </form>
+
+<!-- Instructor Experience Form -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorExperience" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Instructor Experience</h3>
+        <div class="d-flex flex-column gap-2">
+            <h5 class="text-center mt-0">Your Current Courses</h5>
+            <div class="table-responsive">
+                <table id="tblCourses" class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Course's Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <!-- The <a> makes it a clickable button that will link to the course screen -->
+                                <a id="btnInstructorPlaceholderCourse" class="btn btn-link" aria-label="click to view course's teams">placeholderCourse</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-success col-12" type="button" id="btnInstructorCreateCourse" aria-label="button to create a new course">Create New Course</button>
+        </div>
+        <button class="btn btn-link col-12 mt-0" type="button" id="btnInstructorSignOut" aria-label="button to sign out">Sign Out</button>
+    </div>
+</form>
+
+<!-- Create a new course from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorCreateNewCourse" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Create New course</h3>
+        <input id="txtNewCourseName" type="text" placeholder="Enter The New Course's Name" aria-label="Enter the new course's name" class="form-control mb-2">
+        <button class="btn btn-primary col-12" type="button" id="btnInstructorCreateNewCourse" aria-label="button to create the new course">Create New Course</button>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToExperienceFromCreateCourse" aria-label="button to go back to experience page">Back</button>
+    </div>
+</form>
+
+
+<!-- Course view from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorCourseView" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Course Title</h3>
+        <div class="table-responsive">
+            <table id="tblInstrcutorViewTeamsInCourse" class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Team's Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <!-- The <a> makes it a clickable button that will link to the course screen -->
+                            <a id="btnInstructorPlaceholderTeam" class="btn btn-link" aria-label="click to view team members">placeholderTeam</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+            <button class="btn btn-primary col-5" type="button" id="btnInstructorReviewCreate" aria-label="button to create a review">Create New Review</button>
+            <button class="btn btn-primary col-5" type="button" id="btnInstructorTeamCreate" aria-label="button to create a new team">Create New Team</button>
+        </div>
+        <button class="btn btn-secondary col-12 mt-3" type="button" id="btnInstructorReport" aria-label="button to go generate a report on the course">Generate Report</button>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToExperience" aria-label="button to go back to experience">Back</button>
+    </div>
+</form>
+
+<!-- Report view from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorReportView" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Course Reports</h3>
+        <div class="table-responsive">
+            <table id="tblInstrcutorViewStudentsInTeam" class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Review Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <!-- The <a> makes it a clickable button that will link to the course screen -->
+                            <a id="btnInstructorPlaceholderReviewName" class="btn btn-link" aria-label="click to view review metrics">placeholderReviewName</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToCourseViewFromReport" aria-label="button to go back to course view">Back</button>
+    </div>
+</form>
+
+<!-- Create a new review from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorCreateNewReview" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Create New Review</h3>
+        <input id="txtNewMetric" type="text" placeholder="Enter The New metric's Name" aria-label="Enter the new metric's name" class="form-control mb-2">
+        <select class="form-select" id="selectReviewType" aria-label="select review Type">
+            <option>Linkert</option>
+            <option>Multiple Choise</option>
+            <option>Short Answer</option>
+            <option>Relative Ranking</option>
+        </select>
+        <div class="d-flex justify-content-between mt-4">
+            <button class="btn btn-primary col-5" type="button" id="btnInstructorAddMetricToReview" aria-label="button to add metric to the review">Add Metric To Review</button>
+            <button class="btn btn-primary col-5" type="button" id="btnInstructorPublishNewReview" aria-label="button to publish the new review">Review and Publish</button>
+        </div>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToCourseViewFromCreateReview" aria-label="button to go back to course view">Back</button>
+    </div>
+</form>
+
+<!-- Create a new team from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorCreateNewTeam" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Create New Team</h3>
+        <input id="txtNewTeamName" type="text" placeholder="Enter The New Team's Name" aria-label="Enter the new team's name" class="form-control mb-2">
+        <button class="btn btn-primary col-5" type="button" id="btnInstructorCreateNewTeam" aria-label="button to create the new team">Create New Team</button>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToCourseViewFromCreateTeam" aria-label="button to go back to course view">Back</button>
+    </div>
+</form>
+
+<!-- Team view from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorTeamView" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Team Name</h3>
+        <div class="table-responsive">
+            <table id="tblInstrcutorViewStudentsInTeam" class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Student's Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <!-- The <a> makes it a clickable button that will link to the course screen -->
+                            <a id="btnInstructorPlaceholderStudent" class="btn btn-link" aria-label="click to view student's reviews">placeholderStudent</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-primary col-5" type="button" id="btnInstructorAddStudentToTeam" aria-label="button to add a team member">Add member to team</button>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToCourseView" aria-label="button to go back to course view">Back</button>
+    </div>
+</form>
+
+<!-- Student reviews view from the instructor perspective -->
+<form class="card col-12 col-md-5 col-lg-4" id="frmInstructorStudentReview" style="display: none;">
+    <div class="card-body">
+        <h1 class="text-center mb-0 text-primary">CSC3100</h1>
+        <h3 class="text-center text-primary">Student's Name</h3>
+        <div class="table-responsive">
+            <table id="tblInstrcutorViewStudentReviews" class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Review Privacy</th>
+                        <th>Review Sender</th>
+                        <th>Metric Being Rated</th>
+                        <th>Rating Recieved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>placeholderPrivacy</td>
+                        <td>placeholderName</td>
+                        <td>placeholderMetric</td>
+                        <td>placeholderRating</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-success col-12 mt-2" type="button" id="btnInstructorBackToTeamView" aria-label="button to go back to team view">Back</button>
+    </div>
+</form>
