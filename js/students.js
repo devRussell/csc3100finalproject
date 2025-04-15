@@ -16,6 +16,11 @@ document.querySelector('#btnSignOut').addEventListener('click', function(){
     document.querySelector('#frmStudentLogin').style.display = 'block'
 })
 
+// Shows student score when the user clicks on the button
+document.querySelector('#btnStudentScore').addEventListener('click', function() {
+    document.querySelector('#studentScore').style.display = 'block';
+});
+
 
 //hides pending reviews when the user clicks on the submit button or the delete button
 //Doesn't work yet
